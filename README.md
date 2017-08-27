@@ -1,1 +1,1 @@
-# telluriumClass
+# telluriumTutorial

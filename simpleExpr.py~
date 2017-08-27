@@ -1,0 +1,14 @@
+import tellurium as te
+# Single gene expressing protein and protein undergoing degradation
+r = te.loada ('''
+      # Reactions: 
+      J1:   -> P; Vm*T^4/(K+T^4)
+      J2: P ->  ; k1*P; 
+
+      # Species initializations: 
+      P = 0;   T = 5; Vm = 10
+      K = 0.5; k1 = 4.5;   
+''')
+
+result = r.simulate(0, 2, 50)
+r.plot (result)

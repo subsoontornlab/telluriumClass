@@ -1,0 +1,10 @@
+# Simple constitutive gene expression model
+import tellurium as te
+import numpy as np
+import pylab as plt
+r = te.loada ('''
+     J1: $G -> $G + X1; a*$G;
+     J2: X1  -> ; b*X1;
+     X0 = 1.0; S1 = 0.0; X1 = 0.0;
+     k1 = 0.4; k2 = 2.3;
+ ''')

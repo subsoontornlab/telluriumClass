@@ -1,0 +1,12 @@
+# Parameter Scan
+ # This code will run five simulations, each simulation
+ # having a different values for a rate constant
+import tellurium as te
+import numpy as np
+import pylab
+r = te.loada ('''
+     J1: $X0 -> S1; k1*X0;
+     J2: S1 -> $X1; k2*S1;
+     X0 = 1.0; S1 = 0.0; X1 = 0.0;
+     k1 = 0.4; k2 = 2.3;
+ ''')
